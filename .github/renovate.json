@@ -1,0 +1,15 @@
+{
+	"extends": [
+		"config:base"
+	],
+	"labels": [
+		"Dependencies"
+	],
+	"packageRules": [
+		{
+			"groupName": "dependencies",
+			"matchUpdateTypes": ["minor", "patch", "pin", "digest"]
+		}
+	],
+	"schedule": ["every sunday"]
+}
