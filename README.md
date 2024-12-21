@@ -43,6 +43,6 @@ Except for the source code licensed under the GPLv3 license, all other parties a
 <p align="center">Thank you to all the people who have already contributed!</p>
 <p align="right">
 	<a href="https://github.com/deniscerri/ytdlnis/graphs/contributors">
-		<img src="https://contrib.rocks/image?repo=deniscerri/ytdlnis_website" width="800"/>
+		<img src="https://contrib.rocks/image?repo=deniscerri/ytdlnis_website" width="300"/>
 	</a>
 </p>

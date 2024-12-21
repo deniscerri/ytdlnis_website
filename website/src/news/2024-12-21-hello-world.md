@@ -7,7 +7,7 @@ date: 2023-09-10
 
 # Official Website
 
-Following many complains and issues of false websites that profit off of this FOSS application, 
+Following many complains and issues of false websites that profit off of this FOSS application,
 i have built this ad-free website.
 
 You can find here all the guides about how to use the application and frequently asked questions.

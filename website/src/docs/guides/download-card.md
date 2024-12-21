@@ -6,4 +6,3 @@ description: How to configure a download.
 
 # Download Card
 How to configure a download.
-

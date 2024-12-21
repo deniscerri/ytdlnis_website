@@ -6,4 +6,3 @@ description: How to create custom Filename Templates.
 
 # Filename Templates
 How to create custom Filename Templates.
-

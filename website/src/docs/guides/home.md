@@ -17,7 +17,7 @@ You can copy them in your clipboard and the app will show you the clipboard floa
 ## I have configured the app to not show the download card but i want it to open up sometimes
 You can press and hold the video/audio button in a result item and the download card will open.
 
-## I want to have video recommendations in the home screen.
+## I want to have video recommendations in the home screen
 Go to <nav to="recommnedations"> and select the video recommendation method.
 
 ## How do I manage what's downloading?
@@ -26,4 +26,3 @@ Navigate to <nav to="download-queue"> to interact with queued downloads or doubl
 Cancel all items by clicking the **Overflow** button beside a series chapter or the top right corner.
 
 To reorder the queue, long-press and drag the `=` icon next to a queue item.
-

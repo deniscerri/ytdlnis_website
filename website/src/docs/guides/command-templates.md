@@ -6,4 +6,3 @@ description: How to setup Observe Sources in YTDLnis.
 
 # Observe Sources
 How to setup Observe Sources in YTDLnis.
-

@@ -8,45 +8,47 @@ const downloadInformation = computed(() => ({
   stable: {
     tagName: release.stable.tag_name ?? 'v0.00.0',
     assets: release.stable.assets,
-    asset: getAppropriateAsset(release.stable.assets)
+    asset: getAppropriateAsset(release.stable.assets),
   },
 }))
 
-
 function getAppropriateAsset(assets) {
-  switch(getDeviceArchitecture()) {
-    case "arm64":
+  switch (getDeviceArchitecture()) {
+    case 'arm64':
       return (assets ?? []).find(a => /^YTDLnis-.*arm64-v8a-release.apk/.test(a.name))
-    case "armeabi-v7a":
-    case "armeabi":
+    case 'armeabi-v7a':
+    case 'armeabi':
       return (assets ?? []).find(a => /^YTDLnis-.*armeabi-v7a-release.apk/.test(a.name))
-    case "x86_64":
+    case 'x86_64':
       return (assets ?? []).find(a => /^YTDLnis-.*x86_64-release.apk/.test(a.name))
-    case "x86":
+    case 'x86':
       return (assets ?? []).find(a => /^YTDLnis-.*x86-release.apk/.test(a.name))
     default:
       return (assets ?? []).find(a => /^YTDLnis-.*universal--release.apk/.test(a.name))
   }
-
-  
 }
 
 function getDeviceArchitecture() {
-    const userAgent = navigator.userAgent.toLowerCase();
-    const platform = navigator.platform.toLowerCase();
+  const userAgent = navigator.userAgent.toLowerCase()
+  const platform = navigator.platform.toLowerCase()
 
-    if (userAgent.includes("arm64") || platform.includes("arm64")) {
-        return "arm64";
-    } else if (userAgent.includes("armv7") || platform.includes("armv7")) {
-        return "armeabi-v7a";
-    } else if (userAgent.includes("x86_64") || platform.includes("x86_64") || userAgent.includes("x64") || platform.includes("x64")) {
-        return "x86_64";
-    } else if (userAgent.includes("x86") || platform.includes("x86")) {
-        return "x86";
-    } else if (userAgent.includes("arm")) {
-        return "armeabi";
-    }
-    return "unknown";
+  if (userAgent.includes('arm64') || platform.includes('arm64')) {
+    return 'arm64'
+  }
+  else if (userAgent.includes('armv7') || platform.includes('armv7')) {
+    return 'armeabi-v7a'
+  }
+  else if (userAgent.includes('x86_64') || platform.includes('x86_64') || userAgent.includes('x64') || platform.includes('x64')) {
+    return 'x86_64'
+  }
+  else if (userAgent.includes('x86') || platform.includes('x86')) {
+    return 'x86'
+  }
+  else if (userAgent.includes('arm')) {
+    return 'armeabi'
+  }
+
+  return 'unknown'
 }
 
 const isAndroid = ref(true)
@@ -103,7 +105,6 @@ function handleAnalytics(type: 'preview' | 'stable') {
         <span class="text">Stable</span>
         <span class="version">{{ downloadInformation.stable.tagName }}  ({{ downloadInformation.stable.asset?.name.match(/(arm64-v8a|armeabi-v7a|x86_64|x86|armeabi)/g)[0] }}) </span>
       </a>
-
     </div>
     <span class="version-disclaimer">
       Requires <strong>Android 7.0</strong> or higher.

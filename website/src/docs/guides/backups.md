@@ -22,11 +22,11 @@ Backups in **YTDLnis** are compatible between different versions of the app as l
 - **Cancelled Downloads**
 - **Errored Downloads**
 - **Saved Downloads**
-- **Cookies** 
-- **Command Templates** 
-- **Shortcuts** 
-- **Search History** 
-- **Observe Sources** 
+- **Cookies**
+- **Command Templates**
+- **Shortcuts**
+- **Search History**
+- **Observe Sources**
 
 You can also choose which of them to exclude from a backup!
 

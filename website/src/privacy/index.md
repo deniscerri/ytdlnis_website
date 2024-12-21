@@ -20,7 +20,7 @@ YTDLnis respects your privacy.It does not ask you for additional permissions and
 
 🏷YTDLnis respects personal data.Users have the option to refrain from utilizing data storage features such as logging their downloads or storing website cookies in the app. They have the ability to delete it or disable their usages.
 The application does not gather any information regarding its usage, nor does it create user profiles or track user activity.
-📢YTDLnis doesn't share your data with third parties. 
+📢YTDLnis doesn't share your data with third parties.
 YTDLnis only requires media access as permission to transfer files to the device or access the downloaded files created from the app only, but the app never accesses any other data.
 
 ## 📎Open Source Software

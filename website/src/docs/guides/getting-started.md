@@ -25,4 +25,3 @@ Essential information to help you get set up with YTDLnis.
 ### Starting Download
 
 After installing, simply search in the home screen or share the URL to the app from the share sheet.
-
