@@ -28,9 +28,11 @@ function getAppropriateAsset(assets) {
   }
 }
 
+const navigatorValue = ref(null)
+
 function getDeviceArchitecture() {
-  const userAgent = navigator.userAgent.toLowerCase()
-  const platform = navigator.platform.toLowerCase()
+  const userAgent = navigatorValue.value?.userAgent?.toLowerCase() ?? ''
+  const platform = navigatorValue.value?.platform?.toLowerCase() ?? ''
 
   if (userAgent.includes('arm64') || platform.includes('arm64')) {
     return 'arm64'
@@ -57,6 +59,9 @@ const isPC = ref(true)
 onMounted(() => {
   isAndroid.value = !!navigator.userAgent.match(/android/i)
   isPC.value = !navigator.userAgent.match(/Mobi|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i)
+  if (typeof navigator !== 'undefined') {
+    navigatorValue.value = navigator
+  }
 })
 
 function handleAnalytics(type: 'preview' | 'stable') {
