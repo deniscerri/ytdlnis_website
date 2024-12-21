@@ -24,7 +24,7 @@ function getAppropriateAsset(assets) {
     case 'x86':
       return (assets ?? []).find(a => /^YTDLnis-.*x86-release.apk/.test(a.name))
     default:
-      return (assets ?? []).find(a => /^YTDLnis-.*universal--release.apk/.test(a.name))
+      return (assets ?? []).find(a => /^YTDLnis-.*arm64-v8a-release.apk/.test(a.name))
   }
 }
 
