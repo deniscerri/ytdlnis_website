@@ -41,7 +41,7 @@ const themeConfig: DefaultTheme.Config = {
   },
 
   editLink: {
-    pattern: 'https://github.com/deniscerri/ytdlnis_website/edit/main/website/src/:path',
+    pattern: 'https://github.com/deniscerri/ytdlnis_website/edit/master/website/src/:path',
     text: 'Help us improve this page',
   },
 
