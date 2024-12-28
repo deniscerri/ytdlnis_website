@@ -7,7 +7,7 @@ description: How to setup Observe Sources in YTDLnis.
 # Observe Sources
 How to setup Observe Sources in YTDLnis.
 
-Observe Sources are a way of making the app periodically check for changes in a source like a playlist or channel and download newly uploaded videos from it. 
+Observe Sources are a way of making the app periodically check for changes in a source like a playlist or channel and download newly uploaded videos from it.
 
 - You can configure a set schedule based on hours, days, days of week or monthly.
 - How often to check

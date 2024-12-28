@@ -32,13 +32,13 @@ This button is not shown by default, but if your download item lacks info you ar
 
 ----
 
-# Core Functionality 
+# Core Functionality
 
 The Download Card is a bottom sheet dialog where you can customize everything (almost) YTDLnis has to offer in functionality. You can download in 3 ways:
 
 ----
 
-# - Audio
+## - Audio
 
 - Title and Author fields are automatically filled by the data extractor process. If you leave them empty, the download will not override the metadata and keep them as they are.
 
@@ -60,7 +60,7 @@ This puts the video thumbnail as the music cover
 
 `Crop Thumbnail`
 
-This crops the thumbnail in a square shape just like a normal music cover instead of the usual 16/9 
+This crops the thumbnail in a square shape just like a normal music cover instead of the usual 16/9
 
 `Split By Chapters`
 
@@ -86,11 +86,11 @@ Useful especially when downloading music and you don't want the fluff
 
 ----
 
-# - Video
+## - Video
 
 - Title and Author fields are automatically filled by the data extractor process. If you leave them empty, the download will not override the metadata and keep them as they are.
 
-### Container
+### Video Container
 
 The container converts the format to the chosen format.
 You might use this function if you are planning to play your video in a device that cant run the original container. For anything else, i suggest to leave the container as it is for the best possible audio quality.
@@ -134,7 +134,6 @@ You are able to:
 
 Re-encode the video into another format if necessary. This can be used when you are trying to change the container.
 
-
 `SponsorBlock`
 
 [Learn more about SponsorBlock](/docs/guides/sponsorblock)
@@ -155,7 +154,7 @@ Useful especially when downloading music and you don't want the fluff
 
 ----
 
-# - Command
+## - Command
 
 This option is disabled by default as there are no created command templates on a fresh install. The app will suggest you to create one. [Learn how to create one!](/docs/guides/command-templates)
 

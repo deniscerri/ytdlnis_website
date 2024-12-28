@@ -35,4 +35,3 @@ When creating a command template / shortcut, you can access them when:
 
 You can use this function to export all of your command templates to your clipboard as a json object.
 You can share this object with anyone who has YTDLnis installed. They just need to copy it to their clipboard and hit import templates. Easy.
-

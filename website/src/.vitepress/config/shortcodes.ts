@@ -45,8 +45,6 @@ const navigationMappings: Record<string, Navigation> = {
   'backup': { name: 'Backup', icon: iconMappings.downloadOutline, dependsOn: 'settings' },
 }
 
-
-
 function generateNavigationHtml(navKey: string) {
   const navData = navigationMappings[navKey]
 

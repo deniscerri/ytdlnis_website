@@ -24,7 +24,6 @@ Command templates are created through metadata tags which can look like:
 
 The suggested section gives you all the possible tags that yt-dlp supports. This doesn't mean that your download item will be able to translate them if it doesn't have the metadata. e.g. using a playlist tag on a single item download
 
-
 ## Downloading in a Sub-Folder
 
 Example template:

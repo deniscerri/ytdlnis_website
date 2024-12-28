@@ -21,7 +21,6 @@ The folder icon lets you choose the preferred destination where to download and 
 
 You can modify the text size and export the output to your clipboard.
 
-
 ## Terminal in Share Menu
 
 In General Settings enable this option to have the terminal as an option in the share menu when sharing an url. The URL will be automatically written in it.
