@@ -8,8 +8,8 @@ hero:
   tagline: Download from over 1000+ websites. Configure every aspect of your downloads in an easy to use interface on your Android device.
   image:
     alt: YTDLnis Home Page
-    light: /home/screenshot.light.png
-    dark: /home/screenshot.dark.png
+    light: /logo.png
+    dark: /logo.png
   actions:
     - theme: brand
       text: Get started

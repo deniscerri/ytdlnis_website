@@ -18,6 +18,7 @@ const iconMappings = {
   security: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,12H19C18.47,16.11 15.72,19.78 12,20.92V12H5V6.3L12,3.19M12,1L3,5V11C3,16.55 6.84,21.73 12,23C17.16,21.73 21,16.55 21,11V5L12,1Z" /></svg>',
   storage: '<svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-160v-160h720v160H120Zm80-40h80v-80h-80v80Zm-80-440v-160h720v160H120Zm80-40h80v-80h-80v80Zm-80 280v-160h720v160H120Zm80-40h80v-80h-80v80Z"/></svg>',
   sync: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12,18A6,6 0 0,1 6,12C6,11 6.25,10.03 6.7,9.2L5.24,7.74C4.46,8.97 4,10.43 4,12A8,8 0 0,0 12,20V23L16,19L12,15M12,4V1L8,5L12,9V6A6,6 0 0,1 18,12C18,13 17.75,13.97 17.3,14.8L18.76,16.26C19.54,15.03 20,13.57 20,12A8,8 0 0,0 12,4Z" /></svg>',
+  terminal: '<svg height="24" width="24" viewBox="0 -960 960 960" fill="var(--vp-c-brand-1)" xmlns="http://www.w3.org/2000/svg"><path d="M352-120H200q-33 0-56.5-23.5T120-200v-152q48 0 84-30.5t36-77.5q0-47-36-77.5T120-568v-152q0-33 23.5-56.5T200-800h160q0-42 29-71t71-29q42 0 71 29t29 71h160q33 0 56.5 23.5T800-720v160q42 0 71 29t29 71q0 42-29 71t-71 29v160q0 33-23.5 56.5T720-120H568q0-50-31.5-85T460-240q-45 0-76.5 35T352-120Zm-152-80h85q24-66 77-93t98-27q45 0 98 27t77 93h85v-240h80q8 0 14-6t6-14q0-8-6-14t-14-6h-80v-240H480v-80q0-8-6-14t-14-6q-8 0-14 6t-6 14v80H200v88q54 20 87 67t33 105q0 57-33 104t-87 68v88Zm310-310Z"/></svg>',
 }
 
 interface Navigation {
@@ -27,41 +28,24 @@ interface Navigation {
 }
 
 const navigationMappings: Record<string, Navigation> = {
-  // Main menus
-  'main_library': { name: 'Library', icon: iconMappings.bookmarkBoxOutline },
-  'main_updates': { name: 'Updates', icon: iconMappings.alertDecagramOutline },
-  'main_history': { name: 'History', icon: iconMappings.history },
-  'main_browse': { name: 'Browse', icon: iconMappings.compassOutline },
   'main_more': { name: 'More', icon: iconMappings.dotsHorizontal },
 
-  // Browse menu
-  'sources': { name: 'Sources', dependsOn: 'main_browse' },
-  'extensions': { name: 'Extensions', dependsOn: 'main_browse' },
-  'migrate': { name: 'Migrate', dependsOn: 'main_browse' },
-
   // More menu
-  'downloaded-only': { name: 'Downloaded only', icon: iconMappings.cloudOffOutline, dependsOn: 'main_more' },
-  'incognito-mode': { name: 'Incognito mode', icon: iconMappings.glasses, dependsOn: 'main_more' },
   'download-queue': { name: 'Download queue', icon: iconMappings.downloadOutline, dependsOn: 'main_more' },
-  'categories': { name: 'Categories', icon: iconMappings.labelOutline, dependsOn: 'main_more' },
-  'statistics': { name: 'Statistics', icon: iconMappings.queryStats, dependsOn: 'main_more' },
   'settings': { name: 'Settings', icon: iconMappings.cog, dependsOn: 'main_more' },
-  'about': { name: 'About', icon: iconMappings.informationOutline, dependsOn: 'main_more' },
-  'help': { name: 'Help', icon: iconMappings.helpCircleOutline, dependsOn: 'main_more' },
+  'commandtemplates': { name: 'Command Templates', icon: iconMappings.terminal, dependsOn: 'main_more' },
 
   // Settings submenu
   'general': { name: 'General', icon: iconMappings.paletteOutline, dependsOn: 'settings' },
-  'library': { name: 'Library', icon: iconMappings.bookmarkBoxOutline, dependsOn: 'settings' },
+  'folders': { name: 'Folders', icon: iconMappings.bookmarkBoxOutline, dependsOn: 'settings' },
   'downloads': { name: 'Downloads', icon: iconMappings.downloadOutline, dependsOn: 'settings' },
-  'tracking': { name: 'Tracking', icon: iconMappings.sync, dependsOn: 'settings' },
-  'browse': { name: 'Browse', icon: iconMappings.compassOutline, dependsOn: 'settings' },
-  'security-and-privacy': { name: 'Security and privacy', icon: iconMappings.security, dependsOn: 'settings' },
-  'reader': { name: 'Reader', icon: iconMappings.bookOpenOutline, dependsOn: 'settings' },
   'advanced': { name: 'Advanced', icon: iconMappings.codeTags, dependsOn: 'settings' },
   'update': { name: 'Updating', icon: iconMappings.downloadOutline, dependsOn: 'settings' },
   'recommnedations': { name: 'Video Recommendations', icon: iconMappings.downloadOutline, dependsOn: 'general' },
   'backup': { name: 'Backup', icon: iconMappings.downloadOutline, dependsOn: 'settings' },
 }
+
+
 
 function generateNavigationHtml(navKey: string) {
   const navData = navigationMappings[navKey]
