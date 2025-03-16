@@ -9,6 +9,7 @@ About PoToken
 PoToken is a token system created by YouTube to validate stream requests. Each Client works with a different PoToken. Only Web Client PoTokens are compatible. For now, we are getting PoTokens for web clients. In the future, there will be more.
 
 Using PoToken in YTDLnis
+
 This is easy now. There are two options: (PoToken + Visitordata OR PoToken + visitordata + Cookies)
 
 1. Go to Settings/Advanced. 
@@ -20,4 +21,5 @@ This is easy now. There are two options: (PoToken + Visitordata OR PoToken + vis
 7. If you have enabled the "Visitordata" option below, to use "PoToken+visitor data" with cookies, log in to your YouTube account in "cookies" and click "Get DATA Sync ID" and copy and paste it into the "Data Sync ID" section.
 
 PoToken validity period
+
 We don't know. It doesn't update automatically. If you don't want to, update it every day.😊
