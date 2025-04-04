@@ -1,5 +1,5 @@
 ---
-title: PoToken
+title: PoToken Settings
 titleTemplate: Guides
 description: How to use PoToken.
 ---
