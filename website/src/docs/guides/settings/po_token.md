@@ -1,7 +1,7 @@
 ---
-title: PoToken settings
+title: General settings
 titleTemplate: Settings - Guides
-description: PoToken Settings for YTDLnis.
+description: General Settings for YTDLnis.
 ---
 
 # PoToken Settings
