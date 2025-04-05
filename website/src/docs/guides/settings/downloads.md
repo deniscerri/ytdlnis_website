@@ -64,11 +64,8 @@ Set a background job to clean up downloads in cancelled, errored sections
 ## Retries and Fragment Retries
 Related to socket timeout. After a download is considered to failed, set the amount of times to retry before giving up
 
-
 # Scheduling
 You can set the time period when the app should download
 
 ## Use AlarmManager
 A more strict method to wake up the app to start downloading in time, since WorkManager respects your device restrictions it could be delayed.
-
-

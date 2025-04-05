@@ -20,4 +20,3 @@ Usually you should use this with cache disabled. Otherwise those leftover fragme
 
 ## Restrict Filenames
 Useful if for some reason the download cant finish if the title has weird characters that android doesn't support. Either enable this or modify the title in the download card
-

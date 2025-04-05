@@ -26,6 +26,6 @@ Essential information to help you get set up with YTDLnis.
 
 After installing, simply search in the home screen or share the URL to the app from the share sheet.
 
+---
 
---- 
-* There is a good idea to look at updating settings and update yt-dlp and keep auto-update enabled. In some countries yt-dlp doesn't automatically update so the app could not download properly immediately. Update yt-dlp then try again.
+There is a good idea to look at updating settings and update yt-dlp and keep auto-update enabled. In some countries yt-dlp doesn't automatically update so the app could not download properly immediately. Update yt-dlp then try again.

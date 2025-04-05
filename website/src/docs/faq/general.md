@@ -42,9 +42,8 @@ Read more [here](https://github.com/yt-dlp/yt-dlp#:~:text=There%20are%20currentl
 
 - You can also set your own custom source that represents a yt-dlp fork
 
-
 ## Is it possible to get higher YouTube Music audio quality (higher than 128 Kbps)?
 
 Yes, but you need YouTube Premium subscription, and the app would need it to make a cookie for it. If you don't have the subscription, then it won't be possible to get higher audio quality.
 
-  This higher audio is usually 256 KBps which the quality is twice the best quality without Premium. But remember, if you're trying to convert it to another container and/or set to higher audio quality for the sake of better quality again, then it won't work. Simply put, it's impossible, it just either won't make any difference or decrease its quality even. This has been done by many apps to trick users to think that the app can give users good or even best audio quality, which is really, really false
+This higher audio is usually 256 KBps which the quality is twice the best quality without Premium. But remember, if you're trying to convert it to another container and/or set to higher audio quality for the sake of better quality again, then it won't work. Simply put, it's impossible, it just either won't make any difference or decrease its quality even. This has been done by many apps to trick users to think that the app can give users good or even best audio quality, which is really, really false
