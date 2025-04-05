@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Official Documentation
 layout: home
 
 hero:

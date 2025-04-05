@@ -1,5 +1,5 @@
 ---
-title: Home
+title: Frequently Asked Questions
 titleTemplate: Frequently Asked Questions
 description: Frequently Asked Question about the Home Screen.
 ---
