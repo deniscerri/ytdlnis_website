@@ -15,16 +15,16 @@ const downloadInformation = computed(() => ({
 function getAppropriateAsset(assets) {
   switch (getDeviceArchitecture()) {
     case 'arm64':
-      return (assets ?? []).find(a => /^YTDLnis-.*arm64-v8a-release.apk/.test(a.name))
+      return (assets ?? []).find(a => /^YTDLnis-.*github-.*arm64-v8a-release.apk/.test(a.name))
     case 'armeabi-v7a':
     case 'armeabi':
-      return (assets ?? []).find(a => /^YTDLnis-.*armeabi-v7a-release.apk/.test(a.name))
+      return (assets ?? []).find(a => /^YTDLnis-.*github-.*armeabi-v7a-release.apk/.test(a.name))
     case 'x86_64':
-      return (assets ?? []).find(a => /^YTDLnis-.*x86_64-release.apk/.test(a.name))
+      return (assets ?? []).find(a => /^YTDLnis-.*github-.*x86_64-release.apk/.test(a.name))
     case 'x86':
-      return (assets ?? []).find(a => /^YTDLnis-.*x86-release.apk/.test(a.name))
+      return (assets ?? []).find(a => /^YTDLnis-.*github-.*x86-release.apk/.test(a.name))
     default:
-      return (assets ?? []).find(a => /^YTDLnis-.*arm64-v8a-release.apk/.test(a.name))
+      return (assets ?? []).find(a => /^YTDLnis-.*github-.*arm64-v8a-release.apk/.test(a.name))
   }
 }
 
