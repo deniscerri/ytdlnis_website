@@ -4,54 +4,50 @@
 import { computed, onMounted, ref } from 'vue'
 import { data as release } from '../data/release.data'
 
-const downloadInformation = computed(() => ({
-  stable: {
-    tagName: release.stable.tag_name ?? 'v0.00.0',
-    assets: release.stable.assets,
-    asset: getAppropriateAsset(release.stable.assets),
-  },
-}))
+const architectures = [
+  { id: 'arm64-v8a', label: 'arm64-v8a (64-bit ARM)' },
+  { id: 'armeabi-v7a', label: 'armeabi-v7a (32-bit ARM)' },
+  { id: 'x86_64', label: 'x86_64' },
+  { id: 'x86', label: 'x86' },
+  { id: 'universal', label: 'Universal' },
+]
 
-function getAppropriateAsset(assets) {
-  switch (getDeviceArchitecture()) {
-    case 'arm64':
-      return (assets ?? []).find(a => /^YTDLnis-.*arm64-v8a-release.apk/.test(a.name))
-    case 'armeabi-v7a':
-    case 'armeabi':
-      return (assets ?? []).find(a => /^YTDLnis-.*armeabi-v7a-release.apk/.test(a.name))
-    case 'x86_64':
-      return (assets ?? []).find(a => /^YTDLnis-.*x86_64-release.apk/.test(a.name))
-    case 'x86':
-      return (assets ?? []).find(a => /^YTDLnis-.*x86-release.apk/.test(a.name))
-    default:
-      return (assets ?? []).find(a => /^YTDLnis-.*arm64-v8a-release.apk/.test(a.name))
-  }
+// Only the regular builds. The foss and izzy variants are for F-Droid and IzzyOnDroid.
+function getBuildAssets(assets) {
+  return (assets ?? []).filter(a => /\.apk$/.test(a.name) && !/foss|izzy/i.test(a.name))
+}
+
+function findAsset(assets, arch: string) {
+  return getBuildAssets(assets).find(a => a.name.includes(`-${arch}-`))
 }
 
 const navigatorValue = ref(null)
 
+// Only 32-bit ARM devices get armeabi-v7a. Everything else (including PCs) gets arm64.
 function getDeviceArchitecture() {
   const userAgent = navigatorValue.value?.userAgent?.toLowerCase() ?? ''
   const platform = navigatorValue.value?.platform?.toLowerCase() ?? ''
+  const isAndroidDevice = userAgent.includes('android')
 
-  if (userAgent.includes('arm64') || platform.includes('arm64')) {
-    return 'arm64'
-  }
-  else if (userAgent.includes('armv7') || platform.includes('armv7')) {
+  if (isAndroidDevice && (platform.includes('armv7') || platform.includes('armv8l') || userAgent.includes('armv7') || userAgent.includes('armv8l'))) {
     return 'armeabi-v7a'
   }
-  else if (userAgent.includes('x86_64') || platform.includes('x86_64') || userAgent.includes('x64') || platform.includes('x64')) {
-    return 'x86_64'
-  }
-  else if (userAgent.includes('x86') || platform.includes('x86')) {
-    return 'x86'
-  }
-  else if (userAgent.includes('arm')) {
-    return 'armeabi'
-  }
 
-  return 'unknown'
+  return 'arm64-v8a'
 }
+
+const showOthers = ref(false)
+
+const downloadInformation = computed(() => ({
+  stable: {
+    tagName: release.stable.tag_name ?? 'v0.00.0',
+    assets: release.stable.assets,
+    asset: findAsset(release.stable.assets, getDeviceArchitecture()),
+    others: architectures
+      .map(arch => ({ ...arch, asset: findAsset(release.stable.assets, arch.id) }))
+      .filter(arch => arch.asset),
+  },
+}))
 
 const isAndroid = ref(true)
 const isPC = ref(true)
@@ -108,8 +104,18 @@ function handleAnalytics(type: 'preview' | 'stable') {
       >
         <IconDownload />
         <span class="text">Stable</span>
-        <span class="version">{{ downloadInformation.stable.tagName }}  ({{ downloadInformation.stable.asset?.name.match(/(arm64-v8a|armeabi-v7a|x86_64|x86|armeabi)/g)[0] }}) </span>
+        <span class="version">{{ downloadInformation.stable.tagName }}  ({{ getDeviceArchitecture() }})</span>
       </a>
+    </div>
+    <div class="other-architectures">
+      <button class="other-toggle" type="button" @click="showOthers = !showOthers">
+        {{ showOthers ? 'Hide other architectures' : 'Other architectures' }}
+      </button>
+      <ul v-if="showOthers">
+        <li v-for="arch in downloadInformation.stable.others" :key="arch.id">
+          <a :href="arch.asset.browser_download_url" :download="arch.asset.name">{{ arch.label }}</a>
+        </li>
+      </ul>
     </div>
     <span class="version-disclaimer">
       Requires <strong>Android 7.0</strong> or higher.
@@ -193,6 +199,31 @@ function handleAnalytics(type: 'preview' | 'stable') {
 
   .version {
     font-size: 0.8em
+  }
+}
+
+.other-architectures {
+  text-align: center
+  margin: 0.5em auto
+
+  .other-toggle {
+    font-size: 0.8rem
+    color: var(--vp-c-text-2)
+    text-decoration: underline
+    cursor: pointer
+    background: none
+    border: none
+
+    &:hover {
+      color: var(--vp-c-brand-1)
+    }
+  }
+
+  ul {
+    list-style: none
+    padding: 0
+    margin: 0.5em 0 0
+    font-size: 0.85rem
   }
 }
 

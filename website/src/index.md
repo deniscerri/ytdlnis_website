@@ -41,4 +41,36 @@ features:
     icon: <svg height="24" width="24" viewBox="0 -960 960 960" fill="var(--vp-c-indigo-2)" xmlns="http://www.w3.org/2000/svg"><path d="M440-120v-240h80v80h320v80H520v80h-80Zm-320-80v-80h240v80H120Zm160-160v-80H120v-80h160v-80h80v240h-80Zm160-80v-80h400v80H440Zm160-160v-240h80v80h160v80H680v80h-80Zm-480-80v-80h400v80H120Z"/></svg>
     link: /docs/guides/download-queue
     linkText: Learn more
+  - title: Share Menu
+    details: Share a link from any app and a card shows up right on top of it. Configure and download without leaving what you are doing, or download immediately.
+    link: /docs/guides/share-menu
+    linkText: Learn more
+  - title: Playlists & Batch Downloads
+    details: Process playlists and many links at once. Edit every item separately or set a common format, folder, filename and download type for all of them.
+    link: /docs/guides/playlists
+    linkText: Learn more
+  - title: Cookies
+    details: Log in with your accounts to download private or members only videos, age restricted content and unlock premium formats.
+    link: /docs/guides/cookies
+    linkText: Learn more
+  - title: SponsorBlock, Cutting & Cropping
+    details: Remove sponsors and intros, cut your videos by timestamps or chapters with unlimited cuts, crop the picture and split a file by its chapters.
+    link: /docs/guides/sponsorblock
+    linkText: Learn more
+  - title: Terminal
+    details: Run raw yt-dlp commands from inside the app with multiple sessions, or reuse them as templates and shortcuts in your downloads.
+    link: /docs/guides/terminal
+    linkText: Learn more
+  - title: Packages
+    details: Upgrade or downgrade Python, FFmpeg, JS runtimes and aria2c without waiting for an app update.
+    link: /docs/guides/packages
+    linkText: Learn more
+  - title: Backups
+    details: Back up your settings, history, queue, cookies, templates and sources, and restore them on any device. Automatic backups included.
+    link: /docs/guides/backups
+    linkText: Learn more
+  - title: Troubleshooting
+    details: Downloads failing? Follow the diagnosis steps and find fixes for the most common issues.
+    link: /docs/guides/troubleshooting/
+    linkText: Get help
 ---

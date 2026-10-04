@@ -34,13 +34,19 @@ const navigationMappings: Record<string, Navigation> = {
   'download-queue': { name: 'Download queue', icon: iconMappings.downloadOutline, dependsOn: 'main_more' },
   'settings': { name: 'Settings', icon: iconMappings.cog, dependsOn: 'main_more' },
   'commandtemplates': { name: 'Command Templates', icon: iconMappings.terminal, dependsOn: 'main_more' },
+  'terminal': { name: 'Terminal', icon: iconMappings.terminal, dependsOn: 'main_more' },
+  'logs': { name: 'Logs', icon: iconMappings.bookOpenOutline, dependsOn: 'main_more' },
+  'cookies': { name: 'Cookies', icon: iconMappings.cloudOffOutline, dependsOn: 'main_more' },
+  'observe-sources': { name: 'Observe Sources', icon: iconMappings.sync, dependsOn: 'main_more' },
 
   // Settings submenu
   'general': { name: 'General', icon: iconMappings.paletteOutline, dependsOn: 'settings' },
   'folders': { name: 'Folders', icon: iconMappings.bookmarkBoxOutline, dependsOn: 'settings' },
   'downloads': { name: 'Downloads', icon: iconMappings.downloadOutline, dependsOn: 'settings' },
   'advanced': { name: 'Advanced', icon: iconMappings.codeTags, dependsOn: 'settings' },
+  'processing': { name: 'Processing', icon: iconMappings.cog, dependsOn: 'settings' },
   'update': { name: 'Updating', icon: iconMappings.downloadOutline, dependsOn: 'settings' },
+  'packages': { name: 'Packages', icon: iconMappings.downloadOutline, dependsOn: 'update' },
   'recommnedations': { name: 'Video Recommendations', icon: iconMappings.downloadOutline, dependsOn: 'general' },
   'backup': { name: 'Backup', icon: iconMappings.downloadOutline, dependsOn: 'settings' },
 }

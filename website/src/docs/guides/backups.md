@@ -16,6 +16,7 @@ Backups in **YTDLnis** are compatible between different versions of the app as l
 
 ### What's included in a backup?
 - **Settings** including app settings and source-specific settings
+- **Search Results** currently shown in the home screen
 - **Download History**
 - **Downloads in Queue**
 - **Scheduled Downloads**
@@ -30,8 +31,25 @@ Backups in **YTDLnis** are compatible between different versions of the app as l
 
 You can also choose which of them to exclude from a backup!
 
+The backup is a single file that you can save anywhere, and move to another phone.
+
+::: warning
+If you include cookies, the backup file can be used to log in to your accounts. Keep it somewhere safe.
+:::
+
 ## Restoring a backup
-Restoring a backup can be done through the "Restore" settings.
+Restoring a backup can be done through the "Restore" settings. Select the backup file and the app will show you what is inside it, so you can pick the categories to restore.
+
+You have two choices:
+
+- **Restore** merges the saved data with your current data.
+- **Reset** erases your current data and only uses the saved data from the file.
+
+After it is done, the app lists what has been restored.
+
+## Automatic backup
+
+Enable `Automatic backup` and the app will make a backup of everything whenever it finds that a new version of the app is installed. Choose where they go with `Backup path`.
 
 ## Suggestions for backups
 
